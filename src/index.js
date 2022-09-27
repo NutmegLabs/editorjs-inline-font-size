@@ -54,7 +54,7 @@ class FontSizeTool {
     this.nodes.button.type = 'button';
     this.nodes.button.setAttribute('id', 'fontSizeBtn');
     this.getFontSizeForButton();
-    this.createSvg = this.svg('toggler-down', 15, 15);
+    this.createSvg = this.svg('toggler-down', 13, 13);
     this.nodes.button.appendChild(this.createSvg);
   }
   getFontSizeForButton() {
@@ -70,12 +70,12 @@ class FontSizeTool {
     const fontSizeList = [
       { label: '10', value: '1' },
       { label: '13', value: '2' },
-      { label: '14', value: '3' },
-      { label: '16', value: '4' },
-      { label: '18', value: '5' },
-      { label: '24', value: '6' },
-      { label: '32', value: '7' },
-      { label: '48', value: '8' }
+      { label: '14', value: '8' },
+      { label: '16', value: '3' },
+      { label: '18', value: '4' },
+      { label: '24', value: '5' },
+      { label: '32', value: '6' },
+      { label: '48', value: '7' }
     ];
     this.selectionList = this.make('div', 'selectionList');
     const selectionListWrapper = this.make('div', 'selection-list-wrapper');
