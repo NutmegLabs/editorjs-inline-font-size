@@ -62,6 +62,7 @@ class FontSizeTool {
     const displaySelectedFontSize = this.make('div');
     displaySelectedFontSize.setAttribute('id', this.fontSizeDropDown)
     displaySelectedFontSize.innerHTML = this.emptyString;
+    displaySelectedFontSize.innerHTML = "17";
     this.buttonWrapperText.append(displaySelectedFontSize);
     this.nodes.button.append(this.buttonWrapperText);
   }
@@ -70,7 +71,6 @@ class FontSizeTool {
     const fontSizeList = [
       { label: '10', value: '1' },
       { label: '13', value: '2' },
-      { label: '14', value: '8' },
       { label: '16', value: '3' },
       { label: '18', value: '4' },
       { label: '24', value: '5' },
