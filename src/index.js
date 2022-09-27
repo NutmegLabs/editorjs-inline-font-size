@@ -183,7 +183,7 @@ class FontSizeTool {
     this.selectedFontSize = null;
   }
 
-  svg(name, width = 14, height = 14) {
+  svg(name, width = 15, height = 15) {
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
     icon.classList.add('icon', 'icon--' + name);
