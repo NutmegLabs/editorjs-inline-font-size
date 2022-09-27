@@ -62,7 +62,6 @@ class FontSizeTool {
     const displaySelectedFontSize = this.make('div');
     displaySelectedFontSize.setAttribute('id', this.fontSizeDropDown)
     displaySelectedFontSize.innerHTML = this.emptyString;
-    displaySelectedFontSize.innerHTML = "17";
     this.buttonWrapperText.append(displaySelectedFontSize);
     this.nodes.button.append(this.buttonWrapperText);
   }
@@ -183,7 +182,7 @@ class FontSizeTool {
     this.selectedFontSize = null;
   }
 
-  svg(name, width = 14, height = 14) {
+  svg(name, width = 17, height = 17) {
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
     icon.classList.add('icon', 'icon--' + name);
