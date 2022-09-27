@@ -54,7 +54,7 @@ class FontSizeTool {
     this.nodes.button.type = 'button';
     this.nodes.button.setAttribute('id', 'fontSizeBtn');
     this.getFontSizeForButton();
-    this.createSvg = this.svg('toggler-down', 13, 13);
+    this.createSvg = this.svg('toggler-down', 15, 15);
     this.nodes.button.appendChild(this.createSvg);
   }
   getFontSizeForButton() {
@@ -183,7 +183,7 @@ class FontSizeTool {
     this.selectedFontSize = null;
   }
 
-  svg(name, width = 15, height = 15) {
+  svg(name, width = 14, height = 14) {
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
     icon.classList.add('icon', 'icon--' + name);
