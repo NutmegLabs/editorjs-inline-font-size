@@ -70,6 +70,7 @@ class FontSizeTool {
     const fontSizeList = [
       { label: '10', value: '1' },
       { label: '13', value: '2' },
+      { label: '14', value: 'default' },
       { label: '16', value: '3' },
       { label: '18', value: '4' },
       { label: '24', value: '5' },
@@ -144,6 +145,13 @@ class FontSizeTool {
   }
 
   surround(range) {
+    console.log('range');
+    console.log(range);
+    console.log('document');
+    console.log(document);
+    if (this.selectedFontSize == 'default') {
+      return;
+    }
     if (this.selectedFontSize) {
       document.execCommand('fontSize', false, this.selectedFontSize);
     }
@@ -182,7 +190,7 @@ class FontSizeTool {
     this.selectedFontSize = null;
   }
 
-  svg(name, width = 17, height = 17) {
+  svg(name, width = 14, height = 14) {
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
     icon.classList.add('icon', 'icon--' + name);
