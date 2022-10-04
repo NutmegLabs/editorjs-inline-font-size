@@ -150,7 +150,7 @@ class FontSizeTool {
     console.log('getelement');
     console.log(document.getElementById(this.selectedFontSize));
     if (this.selectedFontSize == 'defaultFontSize') {
-      document.getElementById(this.selectedFontSize).removeAttribute('size');
+      document.getElementById(this.selectedFontSize).removeAttribute('font-size');
       document.getElementById(this.selectedFontSize).style.fontSize = "14px";;
       console.log('default');
       return;
