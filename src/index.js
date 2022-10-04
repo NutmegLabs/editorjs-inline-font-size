@@ -152,9 +152,11 @@ class FontSizeTool {
     if (this.selectedFontSize == 'default') {
       document.getElementById(this.selectedFontSize).removeAttribute('size');
       document.getElementById(this.selectedFontSize).style.fontSize = "14px";;
+      console.log('default');
       return;
     }
     if (this.selectedFontSize) {
+      console.log('other');
       document.execCommand('fontSize', false, this.selectedFontSize);
     }
   }
@@ -164,10 +166,6 @@ class FontSizeTool {
   };
   
   checkState(selection) {
-    console.log('selection.anchorNode');
-    console.log(selection.anchorNode);
-    console.log('selection.focusNode');
-    console.log(selection.focusNode);
     const isActive = document.queryCommandState('fontSize');
     let anchoredElementFontSize = this.getComputedFontStyle(selection.anchorNode);
     console.log('anchoredElementFontSize');
