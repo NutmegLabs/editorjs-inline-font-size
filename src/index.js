@@ -146,7 +146,7 @@ class FontSizeTool {
 
   surround(range) {
     console.log('fontsize');
-    console.log(this.selectedFontsize);
+    console.log(this.selectedFontSize);
     console.log('getelement');
     console.log(document.getElementById(this.selectedFontSize));
     if (this.selectedFontSize == 'default') {
