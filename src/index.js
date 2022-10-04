@@ -70,7 +70,7 @@ class FontSizeTool {
     const fontSizeList = [
       { label: '10', value: '1' },
       { label: '13', value: '2' },
-      { label: '14', value: 'default' },
+      { label: '14', value: 'defaultFontSize' },
       { label: '16', value: '3' },
       { label: '18', value: '4' },
       { label: '24', value: '5' },
@@ -145,11 +145,11 @@ class FontSizeTool {
   }
 
   surround(range) {
+    console.log('fontsize');
+    console.log(this.selectedFontsize);
+    console.log('getelement');
+    console.log(document.getElementById(this.selectedFontSize));
     if (this.selectedFontSize == 'default') {
-      console.log('fontsize');
-      console.log(this.selectedFontsize);
-      console.log('getelement');
-      console.log(document.getElementById(this.selectedFontSize));
       document.getElementById(this.selectedFontSize).removeAttribute('size');
       return;
     }
