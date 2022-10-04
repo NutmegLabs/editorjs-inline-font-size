@@ -150,6 +150,7 @@ class FontSizeTool {
     console.log('document');
     console.log(document);
     if (this.selectedFontSize == 'default') {
+      document.getElementById(this.selectedFontSize).removeAttribute('size');
       return;
     }
     if (this.selectedFontSize) {
