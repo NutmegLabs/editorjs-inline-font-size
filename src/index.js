@@ -149,9 +149,11 @@ class FontSizeTool {
     console.log(this.selectedFontSize);
     console.log('getelement');
     console.log(document.getElementById(this.selectedFontSize));
+    console.log('document');
+    console.log(document);
     if (this.selectedFontSize == 'defaultFontSize') {
-      document.removeAttribute('size');
-      document.style.fontSize = "14px";;
+      //document.removeAttribute('size');
+      //document.style.fontSize = "14px";;
       console.log('default');
       return;
     }
