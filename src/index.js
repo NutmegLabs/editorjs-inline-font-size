@@ -145,19 +145,19 @@ class FontSizeTool {
   }
 
   surround(range) {
-    const c = range.cloneContents();
-    console.log('c');
-    console.log(c);
-    console.log('string');
-    console.log(range.toString());
-    console.log('selection');
-    console.log(window.getSelection().anchorNode.parentNode);
-    console.log('anchornode');
-    console.log(window.getSelection().anchorNode);
-    console.log('focusnode');
-    console.log(window.getSelection().focusNode);
-    console.log('parentnode');
-    console.log(window.getSelection().anchorNode.parentNode);
+    //const c = range.cloneContents();
+    //console.log('c');
+    //console.log(c);
+    //console.log('string');
+    //console.log(range.toString());
+    //console.log('selection');
+    //console.log(window.getSelection().anchorNode.parentNode);
+    //console.log('anchornode');
+    //console.log(window.getSelection().anchorNode);
+    //console.log('focusnode');
+    //console.log(window.getSelection().focusNode);
+    //console.log('parentnode');
+    //console.log(window.getSelection().anchorNode.parentNode);
     if (this.selectedFontSize == 'defaultFontSize') {
       const fontElements = window.getSelection().anchorNode.parentNode
       fontElements.removeAttribute("size");
