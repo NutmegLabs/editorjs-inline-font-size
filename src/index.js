@@ -148,6 +148,8 @@ class FontSizeTool {
     const c = range.cloneContents();
     console.log('c');
     console.log(c);
+    console.log('string');
+    console.log(range.toString());
     console.log('selection');
     console.log(window.getSelection().anchorNode.parentNode);
     console.log('anchornode');
