@@ -151,6 +151,7 @@ class FontSizeTool {
     range.deleteContents();
     console.log('range');
     console.log(range);
+    range.insertNode(txt);
     console.log('selection');
     console.log(window.getSelection());
     console.log('anchorparentnode');
