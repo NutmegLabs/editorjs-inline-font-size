@@ -145,6 +145,14 @@ class FontSizeTool {
   }
 
   surround(range) {
+    console.log('range');
+    console.log(range);
+    const sss = window.getSelection().addRange(range);
+    console.log('sss');
+    console.log(sss);
+    const ttt = document.getSelection().addRange(range);
+    console.log('ttt');
+    console.log(ttt);
     console.log('selection');
     console.log(window.getSelection().anchorNode.parentNode);
     console.log('anchornode');
@@ -171,11 +179,7 @@ class FontSizeTool {
   checkState(selection) {
     const isActive = document.queryCommandState('fontSize');
     let anchoredElementFontSize = this.getComputedFontStyle(selection.anchorNode);
-    console.log('anchoredElementFontSize');
-    console.log(selection.anchorNode);
     const focusedElementFontSize = this.getComputedFontStyle(selection.focusNode);
-    console.log('focusedElementFontSize');
-    console.log(selection.focusNode);
     if (anchoredElementFontSize === focusedElementFontSize) {
       anchoredElementFontSize = anchoredElementFontSize.slice(0, anchoredElementFontSize.indexOf('p'));
       const elementContainsDecimalValue = anchoredElementFontSize.indexOf('.');
