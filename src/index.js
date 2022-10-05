@@ -145,13 +145,8 @@ class FontSizeTool {
   }
 
   surround(range) {
-    const txt = range.toString();
-    console.log('string');
-    console.log(txt);
-    range.deleteContents();
     console.log('range');
     console.log(range);
-    range.insertNode(txt);
     console.log('selection');
     console.log(window.getSelection());
     console.log('anchorparentnode');
@@ -160,9 +155,13 @@ class FontSizeTool {
     console.log(window.getSelection().focusNode.parentNode);
     if (this.selectedFontSize == 'defaultFontSize') {
       //const fontElements = window.getSelection().anchorNode.parentNode
-      const fontElements = window.getSelection().focusNode.parentNode
-      fontElements.removeAttribute("size");
-      fontElements.style.fontSize = "14px";
+      //const fontElements = window.getSelection().focusNode.parentNode
+      //fontElements.removeAttribute("size");
+      //fontElements.style.fontSize = "14px";
+      const txt = range.toString();
+      range.deleteContents();
+      range.insertNode(document.createTextNode(txt));
+
       return;
     }
     if (this.selectedFontSize) {
