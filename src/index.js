@@ -145,23 +145,24 @@ class FontSizeTool {
   }
 
   surround(range) {
-    //const c = range.cloneContents();
-    //console.log('c');
-    //console.log(c);
-    //console.log('string');
-    //console.log(range.toString());
-    //console.log('selection');
-    //console.log(window.getSelection().anchorNode.parentNode);
-    //console.log('anchornode');
-    //console.log(window.getSelection().anchorNode);
-    //console.log('focusnode');
-    //console.log(window.getSelection().focusNode);
-    //console.log('parentnode');
-    //console.log(window.getSelection().anchorNode.parentNode);
     if (this.selectedFontSize == 'defaultFontSize') {
-      const fontElements = window.getSelection().anchorNode.parentNode
-      fontElements.removeAttribute("size");
-      fontElements.style.fontSize = "14px";
+      //const fontElements = window.getSelection().anchorNode.parentNode
+      //const fontElements = window.getSelection().focusNode.parentNode
+      //fontElements.removeAttribute("size");
+      //fontElements.style.fontSize = "14px";
+
+      //const txt = range.toString();
+      //range.deleteContents();
+      //range.insertNode(document.createTextNode(txt));
+
+
+      const txt = range.toString();
+      const yyy = document.createElement('span')
+      yyy.innerHTML = txt;
+      yyy.style.fontSize = "14px";
+      range.deleteContents();
+      range.insertNode(yyy);
+
       return;
     }
     if (this.selectedFontSize) {
