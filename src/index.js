@@ -151,17 +151,16 @@ class FontSizeTool {
       //fontElements.removeAttribute("size");
       //fontElements.style.fontSize = "14px";
 
-      //const txt = range.toString();
-      //range.deleteContents();
-      //range.insertNode(document.createTextNode(txt));
-
-
       const txt = range.toString();
-      const yyy = document.createElement('span')
-      yyy.innerHTML = txt;
-      yyy.style.fontSize = "14px";
       range.deleteContents();
-      range.insertNode(yyy);
+      range.insertNode(document.createTextNode(txt));
+
+      //const txt = range.toString();
+      //const yyy = document.createElement('span')
+      //yyy.innerHTML = txt;
+      //yyy.style.fontSize = "14px";
+      //range.deleteContents();
+      //range.insertNode(yyy);
 
       return;
     }
