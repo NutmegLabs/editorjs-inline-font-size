@@ -145,7 +145,10 @@ class FontSizeTool {
   }
 
   surround(range) {
-    const x = range.extractContents();
+    const c = range.cloneContents();
+    console.log('c');
+    console.log(c);
+    const x = c.extractContents();
     console.log('extract');
     console.log(x);
     console.log('selection');
