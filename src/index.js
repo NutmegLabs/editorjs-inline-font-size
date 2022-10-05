@@ -145,14 +145,9 @@ class FontSizeTool {
   }
 
   surround(range) {
-    console.log('range');
-    console.log(range);
-    const sss = window.getSelection().addRange(range);
-    console.log('sss');
-    console.log(sss);
-    const ttt = document.getSelection().addRange(range);
-    console.log('ttt');
-    console.log(ttt);
+    const x = range.extractContents();
+    console.log('extract');
+    console.log(x);
     console.log('selection');
     console.log(window.getSelection().anchorNode.parentNode);
     console.log('anchornode');
