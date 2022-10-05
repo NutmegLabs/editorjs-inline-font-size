@@ -145,10 +145,12 @@ class FontSizeTool {
   }
 
   surround(range) {
-    console.log('fontsize');
-    console.log(this.selectedFontSize);
-    console.log('getelement');
-    console.log(document.getElementById(this.selectedFontSize));
+    console.log('selection');
+    console.log(window.getSelection().anchorNode.parentNode);
+    console.log('anchornode');
+    console.log(window.getSelection().anchorNode);
+    console.log('parentnode');
+    console.log(window.getSelection().anchorNode.parentNode);
     if (this.selectedFontSize == 'defaultFontSize') {
       const fontElements = window.getSelection().anchorNode.parentNode
       fontElements.removeAttribute("size");
