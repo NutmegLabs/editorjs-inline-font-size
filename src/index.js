@@ -149,17 +149,17 @@ class FontSizeTool {
     console.log(window.getSelection().anchorNode.parentNode);
     console.log('anchornode');
     console.log(window.getSelection().anchorNode);
+    console.log('focusnode');
+    console.log(window.getSelection().focusNode);
     console.log('parentnode');
     console.log(window.getSelection().anchorNode.parentNode);
     if (this.selectedFontSize == 'defaultFontSize') {
       const fontElements = window.getSelection().anchorNode.parentNode
       fontElements.removeAttribute("size");
       fontElements.style.fontSize = "14px";
-      console.log('default');
       return;
     }
     if (this.selectedFontSize) {
-      console.log('other');
       document.execCommand('fontSize', false, this.selectedFontSize);
     }
   }
