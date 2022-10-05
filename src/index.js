@@ -145,8 +145,10 @@ class FontSizeTool {
   }
 
   surround(range) {
-    //console.log('string');
-    //console.log(range.toString());
+    const txt = range.toString();
+    console.log('string');
+    console.log(txt);
+    range.deleteContents();
     console.log('range');
     console.log(range);
     console.log('selection');
