@@ -68,9 +68,9 @@ class FontSizeTool {
 
   addFontSizeOptions() {
     const fontSizeList = [
-      { label: '14', value: 'defaultFontSize' },
       { label: '10', value: '1' },
       { label: '13', value: '2' },
+      { label: '14', value: 'defaultFontSize' },
       { label: '16', value: '3' },
       { label: '18', value: '4' },
       { label: '24', value: '5' },
@@ -172,19 +172,15 @@ class FontSizeTool {
     const isActive = document.queryCommandState('fontSize');
     let anchoredElementFontSize = this.getComputedFontStyle(selection.anchorNode);
     console.log('anchoredElementFontSize');
-    console.log(anchoredElementFontSize);
+    console.log(selection.anchorNode);
     const focusedElementFontSize = this.getComputedFontStyle(selection.focusNode);
     console.log('focusedElementFontSize');
-    console.log(focusedElementFontSize);
+    console.log(selection.focusNode);
     if (anchoredElementFontSize === focusedElementFontSize) {
       anchoredElementFontSize = anchoredElementFontSize.slice(0, anchoredElementFontSize.indexOf('p'));
-      console.log('anchoredElementFontSize');
-      console.log(anchoredElementFontSize);
       const elementContainsDecimalValue = anchoredElementFontSize.indexOf('.');
       if (elementContainsDecimalValue !== -1) {
         anchoredElementFontSize = anchoredElementFontSize.slice(0, anchoredElementFontSize.indexOf('.'));
-        console.log('anchoredElementFontSize');
-        console.log(anchoredElementFontSize);
       }
       this.replaceFontSizeInWrapper(anchoredElementFontSize);
     }
