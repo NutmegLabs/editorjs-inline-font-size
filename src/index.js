@@ -156,7 +156,8 @@ class FontSizeTool {
     console.log('focusparentnode');
     console.log(window.getSelection().focusNode.parentNode);
     if (this.selectedFontSize == 'defaultFontSize') {
-      const fontElements = window.getSelection().anchorNode.parentNode
+      //const fontElements = window.getSelection().anchorNode.parentNode
+      const fontElements = window.getSelection().focusNode.parentNode
       fontElements.removeAttribute("size");
       fontElements.style.fontSize = "14px";
       return;
