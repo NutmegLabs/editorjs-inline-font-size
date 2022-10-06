@@ -153,8 +153,6 @@ class FontSizeTool {
       const sel = window.getSelection();
       console.log(sel);
       console.log(document.getSelection());
-      sel.removeRange();
-      console.log(sel);
       sel.deleteFromDocument();
       console.log(sel);
 
