@@ -150,14 +150,15 @@ class FontSizeTool {
       //const fontElements = window.getSelection().focusNode.parentNode
       //fontElements.removeAttribute("size");
       //fontElements.style.fontSize = "14px";
+
+
+      const txt = range.toString();
+
       const sel = window.getSelection();
-      console.log(sel);
-      console.log(document.getSelection());
       sel.deleteFromDocument();
       console.log(sel);
+      range.insertNode(document.createTextNode(txt));
 
-      //const txt = range.toString();
-      //console.log(txt);
       //console.log(range);
       //range.deleteContents();
       //console.log(range);
