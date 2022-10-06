@@ -160,7 +160,8 @@ class FontSizeTool {
       console.log(range);
       range.insertNode(document.createTextNode(txt));
       console.log(range);
-      sel.appendChild(document.createTextNode(txt));
+      range.deleteContents();
+      console.log(range);
 
       //console.log(range);
       //range.deleteContents();
