@@ -150,12 +150,20 @@ class FontSizeTool {
       //const fontElements = window.getSelection().focusNode.parentNode
       //fontElements.removeAttribute("size");
       //fontElements.style.fontSize = "14px";
-      const txt = range.toString();
-      console.log(txt);
-      console.log(range);
-      range.deleteContents();
-      console.log(range);
-      range.insertNode(document.createTextNode(txt));
+      const sel = window.getSelection();
+      console.log(sel);
+      console.log(document.getSelection());
+      sel.removeRange();
+      console.log(sel);
+      sel.deleteFromDocument();
+      console.log(sel);
+
+      //const txt = range.toString();
+      //console.log(txt);
+      //console.log(range);
+      //range.deleteContents();
+      //console.log(range);
+      //range.insertNode(document.createTextNode(txt));
 
       return;
     }
