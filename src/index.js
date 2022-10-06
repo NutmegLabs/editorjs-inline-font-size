@@ -154,6 +154,7 @@ class FontSizeTool {
       console.log(txt);
       console.log(range);
       range.deleteContents();
+      console.log(range);
       range.insertNode(document.createTextNode(txt));
 
       return;
