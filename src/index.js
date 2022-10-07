@@ -171,8 +171,8 @@ class FontSizeTool {
       range.deleteContents();
       const tnode = document.createTextNode(txt);
       range.insertNode(tnode);
-      tnode.removeAttribute("size");
-      tnode.style.fontSize = "14px";
+      tnode.parentNode.removeAttribute("size");
+      tnode.parentNode.style.fontSize = "14px";
 
       return;
     }
