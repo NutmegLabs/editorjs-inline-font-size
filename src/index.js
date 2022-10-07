@@ -157,6 +157,8 @@ class FontSizeTool {
       range.insertNode(tnode);
       tnode.parentNode.removeAttribute("size");
       tnode.parentNode.style.fontSize = "14px";
+      console.log(range);
+      console.log(window.getSelection());
 
       return;
     }
