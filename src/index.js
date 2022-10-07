@@ -153,7 +153,12 @@ class FontSizeTool {
 
 
       //const txt = range.toString();
-      range.deleteContents();
+      const tt = window.getSelection();
+      tt.deleteFromDocument();
+      //console.log(range);
+      //console.log(range.commonAncestorContainer());
+      //range.deleteContents();
+      //console.log(range);
 
       //const sel = window.getSelection();
       //sel.deleteFromDocument();
