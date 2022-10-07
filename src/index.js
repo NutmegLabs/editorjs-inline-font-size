@@ -154,18 +154,18 @@ class FontSizeTool {
 
       console.log(window.getSelection());
       const anchor = window.getSelection().anchorNode;
-      anchor.removeAttribute("size");
-      anchor.style.fontSize = "14px";
+      anchor.parentNode.removeAttribute("size");
+      anchor.parentNode.style.fontSize = "14px";
       if (anchor.childNodes.length != 0) {
         for (const c of anchor.childNodes) {
-          c.removeAttribute("size");
-          c.style.fontSize = "14px";
+          c.parentNode.removeAttribute("size");
+          c.parentNode.style.fontSize = "14px";
         }
       }
 
       const focus = window.getSelection().focusNode;
-      focus.removeAttribute("size");
-      focus.style.fontSize = "14px";
+      focus.parentNode.removeAttribute("size");
+      focus.parentNode.style.fontSize = "14px";
       if (focus.childNodes.length != 0) {
         for (const c of focus.childNodes) {
           c.removeAttribute("size");
