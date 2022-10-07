@@ -152,15 +152,11 @@ class FontSizeTool {
       //fontElements.style.fontSize = "14px";
 
 
-      const txt = range.toString();
+      //const txt = range.toString();
+      range.deleteContents();
 
-      const sel = window.getSelection();
-      console.log(sel);
-      sel.deleteFromDocument();
-      console.log(sel);
-      const t = sel.getRangeAt(0);
-      t.insertNode(document.createTextNode(txt));
-      //par.appendChild(document.createTextNode(txt));
+      //const sel = window.getSelection();
+      //sel.deleteFromDocument();
 
       //console.log(range);
       //range.insertNode(document.createTextNode(txt));
