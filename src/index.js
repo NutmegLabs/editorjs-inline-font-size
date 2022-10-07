@@ -146,35 +146,30 @@ class FontSizeTool {
 
   surround(range) {
     if (this.selectedFontSize == 'defaultFontSize') {
-      //const fontElements = window.getSelection().anchorNode.parentNode
-      //const fontElements = window.getSelection().focusNode.parentNode
-      //fontElements.removeAttribute("size");
-      //fontElements.style.fontSize = "14px";
-
-
       //const txt = range.toString();
 
-      console.log(window.getSelection());
-      console.log(range.commonAncestorContainer);
-      const anchor = window.getSelection().anchorNode;
-      anchor.parentNode.removeAttribute("size");
-      anchor.parentNode.style.fontSize = "14px";
-      if (anchor.childNodes.length != 0) {
-        for (const c of anchor.childNodes) {
-          c.parentNode.removeAttribute("size");
-          c.parentNode.style.fontSize = "14px";
-        }
-      }
+      console.log(document);
 
-      const focus = window.getSelection().focusNode;
-      focus.parentNode.removeAttribute("size");
-      focus.parentNode.style.fontSize = "14px";
-      if (focus.childNodes.length != 0) {
-        for (const c of focus.childNodes) {
-          c.removeAttribute("size");
-          c.style.fontSize = "14px";
-        }
-      }
+      //console.log(window.getSelection());
+      //const anchor = window.getSelection().anchorNode;
+      //anchor.parentNode.removeAttribute("size");
+      //anchor.parentNode.style.fontSize = "14px";
+      //if (anchor.childNodes.length != 0) {
+      //  for (const c of anchor.childNodes) {
+      //    c.parentNode.removeAttribute("size");
+      //    c.parentNode.style.fontSize = "14px";
+      //  }
+      //}
+
+      //const focus = window.getSelection().focusNode;
+      //focus.parentNode.removeAttribute("size");
+      //focus.parentNode.style.fontSize = "14px";
+      //if (focus.childNodes.length != 0) {
+      //  for (const c of focus.childNodes) {
+      //    c.removeAttribute("size");
+      //    c.style.fontSize = "14px";
+      //  }
+      //}
 
       //const txt = range.toString();
       //console.log(range);
