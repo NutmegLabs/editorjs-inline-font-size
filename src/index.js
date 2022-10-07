@@ -156,12 +156,13 @@ class FontSizeTool {
 
       const sel = window.getSelection();
       sel.deleteFromDocument();
-      console.log(sel);
-      console.log(range);
-      range.insertNode(document.createTextNode(txt));
-      console.log(range);
-      range.deleteContents();
-      console.log(range);
+      sel.selectAllChildren(document.createTextNode(txt));
+
+      //console.log(range);
+      //range.insertNode(document.createTextNode(txt));
+      //console.log(range);
+      //range.deleteContents();
+      //console.log(range);
 
       //console.log(range);
       //range.deleteContents();
