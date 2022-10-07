@@ -167,12 +167,12 @@ class FontSizeTool {
       //  }
       //}
 
-      console.log(range);
-      //const txt = range.toString();
-      //console.log(range);
-      //range.deleteContents();
-      //console.log(range);
-      //range.insertNode(document.createTextNode(txt));
+      const txt = range.toString();
+      range.deleteContents();
+      const tnode = document.createTextNode(txt);
+      range.insertNode(tnode);
+      tnode.removeAttribute("size");
+      tnode.style.fontSize = "14px";
 
       return;
     }
