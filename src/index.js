@@ -152,23 +152,26 @@ class FontSizeTool {
       //fontElements.style.fontSize = "14px";
 
 
+      console.log(window.getSelection());
+      const anchor = window.getSelection().anchorNode.childNodes;
+      anchor.removeAttribute("size");
+      anchor.style.fontSize = "14px";
+      for (const c of anchor) {
+        c.removeAttribute("size");
+        c.style.fontSize = "14px";
+      }
+
+      const focus = window.getSelection().focusNode.childNodes;
+      focus.removeAttribute("size");
+      focus.style.fontSize = "14px";
+      for (const c of focus) {
+        c.removeAttribute("size");
+        c.style.fontSize = "14px";
+      }
+      //fontElements.removeAttribute("size");
+      //fontElements.style.fontSize = "14px";
+
       //const txt = range.toString();
-      const tt = window.getSelection();
-      tt.deleteFromDocument();
-      //console.log(range);
-      //console.log(range.commonAncestorContainer());
-      //range.deleteContents();
-      //console.log(range);
-
-      //const sel = window.getSelection();
-      //sel.deleteFromDocument();
-
-      //console.log(range);
-      //range.insertNode(document.createTextNode(txt));
-      //console.log(range);
-      //range.deleteContents();
-      //console.log(range);
-
       //console.log(range);
       //range.deleteContents();
       //console.log(range);
