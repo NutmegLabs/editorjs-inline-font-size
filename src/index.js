@@ -152,7 +152,10 @@ class FontSizeTool {
       //fontElements.style.fontSize = "14px";
 
 
+      //const txt = range.toString();
+
       console.log(window.getSelection());
+      console.log(range.commonAncestorContainer);
       const anchor = window.getSelection().anchorNode;
       anchor.parentNode.removeAttribute("size");
       anchor.parentNode.style.fontSize = "14px";
@@ -172,8 +175,6 @@ class FontSizeTool {
           c.style.fontSize = "14px";
         }
       }
-      //fontElements.removeAttribute("size");
-      //fontElements.style.fontSize = "14px";
 
       //const txt = range.toString();
       //console.log(range);
