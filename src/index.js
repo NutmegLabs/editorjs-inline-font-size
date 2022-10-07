@@ -167,14 +167,7 @@ class FontSizeTool {
       //  }
       //}
 
-      const txt = range.toString();
-      const sel = window.getSelection(); 
-      sel.deleteFromDocument();
-      console.log(sel);
-      const anchor = sel.anchorNode.parentNode;
-      anchor.remove();
-      range.insertNode(document.createTextNode(txt));
-
+      console.log(range);
       //const txt = range.toString();
       //console.log(range);
       //range.deleteContents();
