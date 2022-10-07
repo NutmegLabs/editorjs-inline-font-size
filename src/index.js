@@ -157,13 +157,10 @@ class FontSizeTool {
       range.insertNode(tnode);
       tnode.parentNode.removeAttribute("size");
       tnode.parentNode.style.fontSize = "14px";
-      if (range.endContainer.lastElementChild != null) {
-        const le = range.endContainer.lastElementChild;
-        le.remove();
-      }
-      console.log("chek");
-      console.log(range);
-      console.log(window.getSelection());
+      //if (range.endContainer.firstElementChild != null) {
+      //  const le = range.endContainer.lastElementChild;
+      //  le.remove();
+      //}
 
       return;
     }
