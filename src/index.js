@@ -155,8 +155,9 @@ class FontSizeTool {
       const txt = range.toString();
 
       const sel = window.getSelection();
-      //const par = window.getSelection().focusNode.parentNode;
+      console.log(sel);
       sel.deleteFromDocument();
+      console.log(sel);
       const t = sel.getRangeAt(0);
       t.insertNode(document.createTextNode(txt));
       //par.appendChild(document.createTextNode(txt));
