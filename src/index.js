@@ -153,14 +153,10 @@ class FontSizeTool {
 
       const txt = range.toString();
       range.deleteContents();
-      range.insertNode(document.createTextNode(txt));
-
-      //const txt = range.toString();
-      //const yyy = document.createElement('span')
-      //yyy.innerHTML = txt;
-      //yyy.style.fontSize = "14px";
-      //range.deleteContents();
-      //range.insertNode(yyy);
+      const tnode = document.createTextNode(txt);
+      range.insertNode(tnode);
+      tnode.parentNode.removeAttribute("size");
+      tnode.parentNode.style.fontSize = "14px";
 
       return;
     }
