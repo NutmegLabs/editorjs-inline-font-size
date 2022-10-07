@@ -167,11 +167,13 @@ class FontSizeTool {
       //  }
       //}
 
-      //const txt = range.toString();
+      const txt = range.toString();
       const sel = window.getSelection(); 
       sel.deleteFromDocument();
       console.log(sel);
-      //range.insertNode(document.createTextNode(txt));
+      const anchor = sel.anchorNode.parentNode;
+      anchor.remove();
+      range.insertNode(document.createTextNode(txt));
 
       //const txt = range.toString();
       //console.log(range);
