@@ -146,9 +146,6 @@ class FontSizeTool {
 
   surround(range) {
     if (this.selectedFontSize == 'defaultFontSize') {
-      const txt = range.toString();
-
-      document.execCommand('insertText', false, txt);
       //console.log(window.getSelection());
       //const anchor = window.getSelection().anchorNode;
       //anchor.parentNode.removeAttribute("size");
@@ -169,6 +166,12 @@ class FontSizeTool {
       //    c.style.fontSize = "14px";
       //  }
       //}
+
+      //const txt = range.toString();
+      const sel = window.getSelection(); 
+      sel.deleteFromDocument();
+      console.log(sel);
+      //range.insertNode(document.createTextNode(txt));
 
       //const txt = range.toString();
       //console.log(range);
