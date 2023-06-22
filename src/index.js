@@ -54,7 +54,7 @@ class FontSizeTool {
     this.nodes.button.type = 'button';
     this.nodes.button.setAttribute('id', 'fontSizeBtn');
     this.getFontSizeForButton();
-    this.createSvg = this.svg('toggler-down', 13, 13);
+    this.createSvg = this.svg(24, 24);
     this.nodes.button.appendChild(this.createSvg);
   }
   getFontSizeForButton() {
@@ -202,13 +202,15 @@ class FontSizeTool {
     this.selectedFontSize = null;
   }
 
-  svg(name, width = 14, height = 14) {
+  svg(width = 17, height = 17) {
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('width', width);
+    icon.setAttribute('height', height);
+    icon.setAttiribute('fill', 'none');
+    icon.setAttirbute('viewBox', '0 0 24 24');
 
-    icon.classList.add('icon', 'icon--' + name);
-    icon.setAttribute('width', width + 'px');
-    icon.setAttribute('height', height + 'px');
-    icon.innerHTML = `<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#${name}"></use>`;
+    //icon.classList.add('icon', 'icon--' + name);
+    icon.innerHTML = `<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7 10L11.8586 14.8586C11.9367 14.9367 12.0633 14.9367 12.1414 14.8586L17 10"></path>`;
 
     return icon;
   }
