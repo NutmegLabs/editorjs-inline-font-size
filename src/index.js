@@ -207,7 +207,7 @@ class FontSizeTool {
     icon.setAttribute('width', width);
     icon.setAttribute('height', height);
     icon.setAttribute('fill', 'none');
-    icon.setAttirbute('viewBox', '0 0 24 24');
+    icon.setAttribute('viewBox', '0 0 24 24');
 
     //icon.classList.add('icon', 'icon--' + name);
     icon.innerHTML = `<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7 10L11.8586 14.8586C11.9367 14.9367 12.0633 14.9367 12.1414 14.8586L17 10"></path>`;
