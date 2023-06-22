@@ -206,7 +206,7 @@ class FontSizeTool {
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     icon.setAttribute('width', width);
     icon.setAttribute('height', height);
-    icon.setAttiribute('fill', 'none');
+    icon.setAttribute('fill', 'none');
     icon.setAttirbute('viewBox', '0 0 24 24');
 
     //icon.classList.add('icon', 'icon--' + name);
